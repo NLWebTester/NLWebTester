@@ -4,7 +4,7 @@
 
 ## Overview
 
-NLWebTester leverages the power of large language models (LLMs), specifically Google's Gemini, to understand user requests expressed in natural language and translate them into a series of actions that automate web browsing GUI tasks.
+NLWebTester leverages the power of large language models (LLMs), specifically, Google's Gemini, to understand user requests expressed in natural language and translate them into a series of actions that automate web browsing GUI tasks.
 
 It utilizes Selenium for browser control and interaction, offering a seamless way to automate complex workflows within a web browser environment.
 
