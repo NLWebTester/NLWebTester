@@ -1,0 +1,94 @@
+# https://python-poetry.org/docs/pyproject/
+
+# PROJECT
+
+[tool.poetry]
+name = "NLWebTester"
+version = "1.0.0"
+description = "Web browser automation through agentic workflows."
+repository = "https://github.com/NLWebTester/NLWebTester"
+documentation = "https://github.com/NLWebTester/NLWebTester/blob/main/README.md"
+authors = ["NLWebTester"]
+readme = "README.md"
+license = "MIT"
+packages = [{ include = "NLWebTester", from = "src" }]
+
+# SCRIPTS
+
+[tool.poetry.scripts]
+NLWebTester = "NLWebTester.scripts:main"
+
+# DEPENDENCIES
+
+[tool.poetry.dependencies]
+python = "^3.12"
+google-generativeai = "^0.7.2"
+loguru = "^0.7.2"
+pydantic = "^2.9.0"
+pydantic-settings = "^2.4.0"
+selenium = "^4.24.0"
+
+[tool.poetry.group.checks.dependencies]
+bandit = "^1.7.9"
+coverage = "^7.5.4"
+mypy = "^1.10.1"
+pytest = "^8.2.2"
+pytest-cov = "^5.0.0"
+pytest-xdist = "^3.6.1"
+ruff = "^0.5.0"
+
+[tool.poetry.group.commits.dependencies]
+pre-commit = "^3.7.1"
+
+[tool.poetry.group.dev.dependencies]
+invoke = "^2.2.0"
+
+[tool.poetry.group.docs.dependencies]
+pdoc = "^14.5.1"
+
+[tool.poetry.group.notebooks.dependencies]
+ipykernel = "^6.29.4"
+nbformat = "^5.10.4"
+
+# CONFIGURATIONS
+
+[tool.bandit]
+targets = ["src"]
+
+[tool.coverage.run]
+branch = true
+source = ["src"]
+omit = ["__main__.py"]
+
+[tool.mypy]
+pretty = true
+strict = true
+python_version = "3.12"
+check_untyped_defs = true
+ignore_missing_imports = true
+plugins = ["pydantic.mypy"]
+
+[tool.pytest.ini_options]
+addopts = "--verbosity=2"
+pythonpath = ["src"]
+
+[tool.ruff]
+fix = true
+indent-width = 4
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.format]
+docstring-code-format = true
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*.py" = ["D100", "D103"]
+
+# SYSTEMS
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
