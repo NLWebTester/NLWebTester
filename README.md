@@ -8,7 +8,7 @@ NLWebTester leverages the power of large language models (LLMs), specifically, G
 
 It utilizes Selenium for browser control and interaction, offering a seamless way to automate complex workflows within a web browser environment.
 
-![Workflow](/demos/workflow_v2-1.png)
+![Workflow](/demos/workflow_v2-2.png)
 
 ## Prerequisites
 
