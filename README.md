@@ -32,9 +32,9 @@ You can check if the key is configured by typing `echo $GOOGLE_API_KEY` in your 
 
 To use NLWebTester, you can provide a natural language query describing the task you want to automate. NLWebTester will then interact with the agent (Gemini) to interpret the query and generate a sequence of actions to be executed by the Selenium WebDriver.
 
-**Example 1: Login case:**
+**Comparison between the natural-language description and the code implementation of the same execution flow:**
 
-![Login case](/demos/example.png)
+![case](/demos/example.png)
 
 
 ## Development
