@@ -8,7 +8,7 @@ NLWebTester leverages the power of large language models (LLMs), specifically, G
 
 It utilizes Selenium for browser control and interaction, offering a seamless way to automate complex workflows within a web browser environment.
 
-![Workflow](/demos/workflow_v2-2.png)
+![Workflow](/demos/workflow.png)
 
 ## Prerequisites
 
@@ -34,9 +34,7 @@ To use NLWebTester, you can provide a natural language query describing the task
 
 **Example 1: Login case:**
 
-![Login case](/demos/login.png)
-> NLWebTester "Open the URLs website. Write the username 'Heath93' and write the password 'xxx'. Click on the Sign In button"
-
+![Login case](/demos/example.png)
 
 
 ## Development
