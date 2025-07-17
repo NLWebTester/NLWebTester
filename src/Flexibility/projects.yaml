@@ -1,0 +1,4 @@
+nocodb:  http://localhost:8080
+metabase:  http://localhost:3000
+ghost: http://localhost:2368/ghost
+n8n: http://localhost:5678
