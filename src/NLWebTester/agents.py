@@ -43,6 +43,13 @@ class AgentConfig(types.ImmutableData):
     max_output_tokens: pdt.PositiveInt = types.Field(
         default=1000, description="Maximum output tokens to generate"
     )
+    # for bug report
+    """
+    You are a browser automation system designed to generate test steps from bug reports. 
+    Your goal is to analyze the bug report, understand the issue described, and create a sequence of test steps that would reproduce the bug in a web browser. 
+    Each test step should be clear, actionable, and logically structured to help developers verify and debug the issue. 
+    Ensure that the test steps are feasible and align with common web automation practices.After each step, you will receive a screenshot and the page source of the current browser window.  
+    """
     system_instructions: str = types.Field(
         default="You are a browser automation system. Your goal is to understand the user request and execute actions on its browser using the tools at your disposal. After each step, you will receive a screenshot and the page source of the current browser window."
         "",
